@@ -1,11 +1,17 @@
 package utilisateur;
 
-public abstract class UserAbstract extends UserProfile{
-	
+import java.util.ArrayList;
+import java.util.List;
 
-	protected UserAbstract(String name, String userName, int sexe, String mailAdress, String password) {
-		super(name, userName, sexe, mailAdress, password);
+import projet.ProjectAbstract;
+
+public abstract class UserAbstract extends UserProfile{
+	private List<ProjectAbstract> userProjectList;
+
+	protected UserAbstract(String firstName, String lastName, String userName, int sexe, String mailAdress, String password) {
+		super(firstName, lastName, userName, sexe, mailAdress, password);
 		// TODO Auto-generated constructor stub
+		userProjectList = new ArrayList<ProjectAbstract>();
 	}
 	
 	

@@ -3,14 +3,16 @@ package utilisateur;
 public abstract class UserProfile {
 	
 	
-	private String name;
+	private String firstName;
+	private String lastName;
 	private String userName;
 	private int sexe;
 	private String mailAdress;
 	private String password;
 	
-	protected UserProfile (String name, String userName, int sexe, String mailAdress, String password){
-		this.name = name;
+	protected UserProfile (String firstName, String lastName, String userName, int sexe, String mailAdress, String password){
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.userName = userName;
 		this.sexe = sexe;
 		this.mailAdress = mailAdress;
@@ -21,27 +23,31 @@ public abstract class UserProfile {
 	/*
 	 * Il faut coder tout ça en faisant des requêtes à la base de donnée
 	 */
-	protected String getName(){
-		return this.name;
+	public String getFirstName(){
+		return this.firstName;
 	}
 	
-	protected String getUsername(){
+	public String getLastName(){
+		return this.lastName;
+	}
+	
+	public String getUsername(){
 		return this.userName;
 	}
 	
-	protected void setUserName (String newUserName) {
+	public void setUserName (String newUserName) {
 		this.userName = newUserName;
 	}
 	
-	protected int getSexe(){
+	public int getSexe(){
 		return this.sexe;
 	}
 	
-	protected String getMailAdress(){
+	public String getMailAdress(){
 		return mailAdress;
 	}
 	
-	protected void setPassword(String password){
+	public void setPassword(String password){
 		this.password = password;
 	}
 
